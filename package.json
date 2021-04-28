@@ -1,0 +1,19 @@
+{
+  "name": "esbuild-merge-externals",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "__build": "esbuild --bundle src/a.ts --external:myexternal --external:is-lower-case --format=esm",
+    "__build:normal": "npm run __build -- --outfile=dist/index.js",
+    "__build:minify": "npm run __build -- --outfile=dist/index.min.js --minify",
+    "build": "npm run __build:normal && npm run __build:minify"
+  },
+  "devDependencies": {
+    "esbuild": "^0.11.15",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "is-lower-case": "^2.0.2"
+  }
+}

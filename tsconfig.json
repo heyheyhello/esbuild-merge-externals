@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "myexternal": [
+        "./external-module.ts"
+      ]
+    },
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
